@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desafios</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">;
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    </head>
+    <body>
+   
+    	
+	  	<div class="container">
+      		<header class="header clearfix">
+	        	<nav>
+		            <ul class="nav nav-pills float-right">
+		            	<li class="nav-item">
+		              		<a class="nav-link" href="{{ url_for('desafio_1') }}">Desafio 1</a>
+		            	</li>
+		            	<li class="nav-item">
+		              		<a class="nav-link" href="{{ url_for('desafio_2') }}">Desafio 2</a>
+		            	</li>
+		            	<li class="nav-item">
+		              		<a class="nav-link" href="{{ url_for('desafio_3') }}">Desafio 3</a>
+		            	</li>
+		          	</ul>
+	        	</nav>
+	        	<h3 class="text-muted">Desafio - CC</h3>
+      		</header>
+
+	      	<main role="main">
+	      		{% block content %}
+			    {% endblock %}
+		    </main>
+
+	      	<footer class="footer" style="margin-bottom: 0px">
+	        	<p>&copy; Pedro Henrique C. Martins - 2018</p>
+	      	</footer>
+
+    	</div> <!-- /container -->
+
+    </body>
+</html>

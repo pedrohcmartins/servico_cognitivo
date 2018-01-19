@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+          
+<div class="jumbotron">
+	<h2>Usuários com suas emoções a partir da sua descrição</h2>
+</div>
+
+{% for data in user %}
+<div class="row marketing box-modelo" >
+	
+	<div class="col-lg-6">
+	    <h4>Texto digitado</h4>
+	    <p><b>Nome: </b>{{data.name}}</p>
+	    <p><b>Email: </b>{{data.email}}</p>
+	    <p><b>Descrição: </b>{{data.desc}}</p>
+	</div>
+
+	<div class="col-lg-6">
+	    <h4>Detecção de Emoção no texto</h4>
+	    <p><b>Linguagem:</b> {{data.language}}</p>
+	    <p><b>Palavras-chave:</b> {{data.key}}</p>
+	    <p><b>Emoção:</b> {{data.sentiment}}%</p>
+	</div>
+	<hr>
+	
+</div>          
+{% endfor %}
+
+{% endblock %}

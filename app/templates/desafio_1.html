@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+          
+<div class="jumbotron">
+	<form method="POST" action="{{ url_for('desafio_1') }}">
+		<div class="form-group">
+	    	<label for="name">Nome</label>
+	    	<input type="text" class="form-control" name="name" id="name" placeholder="Nome">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="email">Email</label>
+	    	<input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="desc">Descrição</label>
+	    	<textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+	  	</div>
+	  	<button type="submit" class="btn btn-primary">Enviar</button>
+		<button type="reset" class="btn btn-primary">Limpar</button>
+	</form>
+	
+</div>
+
+{% if data %}
+<div class="row marketing">
+	<div class="col-lg-12">
+		<div class="alert alert-success" role="alert">
+  			{{data}}
+		</div>
+	</div>
+</div>
+{% endif %}
+	    
+
+{% endblock %}

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+
+.box-modelo {
+	background-color: #f6f8fa;
+	padding: 15px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
